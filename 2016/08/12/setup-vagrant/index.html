@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="##必须食材
+
+下载Vagrant，包括Mac，Windows，Debian系，CentOS系。\
+下载虚拟机，可用项包括VirtualBox，VMware，Parallels，请尽量下载最新稳定版。
+对于国内的网络环境，还需要提前准备下box。个人推荐这里,手动下载，并加载后不需要另外下载了。
+最">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Beta">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="setup-vagrant"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Obdream"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>setup-vagrant - Obdream</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/08/12/setup-vagrant/">
+                setup-vagrant
+            </a>
+        </h1>
+        <div class="post-info">
+            <span class="date">2016-08-12</span>
+            <a href="#disqus_thread" class="comments">Kommentare</a>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>##必须食材</p>
+<ol>
+<li><a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">下载Vagrant</a>，包括Mac，Windows，Debian系，CentOS系。\</li>
+<li>下载虚拟机，可用项包括VirtualBox，VMware，Parallels，请尽量下载最新稳定版。</li>
+<li>对于国内的网络环境，还需要提前准备下box。个人推荐<a href="https://github.com/chef/bento" target="_blank" rel="external">这里</a>,手动下载，并加载后不需要另外下载了。</li>
+<li>最好准备个命令行环境，推荐Babun，Git Bash，Cmder。</li>
+</ol>
+<h2 id="必要的配置"><a href="#必要的配置" class="headerlink" title="必要的配置"></a>必要的配置</h2><p>配置可以有很多姿势，对于我自己是很基础很土鳖的方式，但是对于现阶段来说可用，也就够了，<br>不求上进了。</p>
+<p>有个生成配置的网站<a href="https://puphpet.com/" target="_blank" rel="external">Puphpet</a>,没太用好。大概意思就是一个配置并生成Vagrantfile的图形界面，<br>倒是很简单也很全，还有ES，但是墙始终是个问题，我也就没深究。</p>
+<p><strong>Vagrantfile</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># -*- mode: ruby -*-</div><div class="line"># vi: set ft=ruby :</div><div class="line"></div><div class="line">Vagrant.configure(2) do |config|</div><div class="line"></div><div class="line">  config.vm.box = &quot;bo/ubunto-14.04&quot;</div><div class="line"></div><div class="line">  # config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</div><div class="line"></div><div class="line">    config.vm.network &quot;private_network&quot;, ip: &quot;11.11.11.33&quot;</div><div class="line"></div><div class="line">  config.vm.synced_folder &quot;www&quot;, &quot;/vagrant&quot;,</div><div class="line">    create: true, owner: &quot;root&quot;, group: &quot;root&quot;</div><div class="line"></div><div class="line">end</div></pre></td></tr></table></figure></p>
+<p>有两点着重说明：端口转发和私有IP。<br>端口转发可以让同一网络中的网络设备通过请求你本机来访问虚拟机中的系统。<br>私有IP只需要注意不要和其他IP有冲突就好，怎么设置随你大小便。</p>
+<p><strong>init.sh</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"></div><div class="line">sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</div><div class="line">sleep 2</div><div class="line"></div><div class="line">sudo cat&gt;/etc/apt/sources.list&lt;&lt;EOF</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse</div><div class="line">EOF</div><div class="line">sleep 1</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line">sleep 1</div><div class="line"></div><div class="line">sudo apt-get install vim -y</div></pre></td></tr></table></figure>
+<p>这个bash脚本做了三件事，公平！公平！还是他妈公平！<br>修改时区，配置了ubuntu国内源（我这是14.04），安装了Vim。</p>
+<p>其实后面你可以根据需要继续发挥，这是基本上每台上都需要的基本设置。</p>
+<h2 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h2><h3 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h3><p>随便创建个目录作为你的工作目录，比如我叫ubuntu_14.04。<br>进到这个目录打开命令行，将之前准备的Vagrantfile放到下面,使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vagrant up</div></pre></td></tr></table></figure></p>
+<p>注意，如果报错有个很普遍的问题是没有开启虚拟化，去BIOS的配置界面去修改。<br>如果还是有问题，可以打开虚拟机，通过虚拟机显示的错误信息排查。<br>完成后，本机中的文件夹结构大约如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ubuntu_14.04</div><div class="line">|_.vagrant</div><div class="line">|_ www</div><div class="line">|_ Vagrantfile</div></pre></td></tr></table></figure></p>
+<h3 id="接下来"><a href="#接下来" class="headerlink" title="接下来"></a>接下来</h3><p>可以通过命令行直接ssh，也可以通过其他手段，ssh信息可以通过如下命令获得。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vagrant ssh-config</div></pre></td></tr></table></figure></p>
+<p>进入服务器后，在根目录下有个vagrant目录就是我们在本机同步的文件夹。<br>可以将之前准备的init.sh放到www目录下，通过如下命令运行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /vagrant/init.sh</div></pre></td></tr></table></figure></p>
+<h3 id="至此"><a href="#至此" class="headerlink" title="至此"></a>至此</h3><p>基本配置完成，如需安装其他的如nodejs，php，mysql， mongodb等按*inx中的操作尽情发挥了。</p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/vagrant/">#vagrant</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+    <div class="comments">
+        
+
+
+    </div>
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是一个普通的网站
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2016/08/12/setup-vagrant/">setup-vagrant</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/06/30/install-setting-elasticsearch/">install-setting-elasticse</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

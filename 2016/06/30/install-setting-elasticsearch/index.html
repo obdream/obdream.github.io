@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="环境介绍
+Ubuntu 14.04
+国内
+JAVA 
+vagrant
+WIN10
+
+具体的shell脚本12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Beta">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="install-setting-elasticsearch"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Obdream"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>install-setting-elasticsearch - Obdream</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/06/30/install-setting-elasticsearch/">
+                install-setting-elasticsearch
+            </a>
+        </h1>
+        <div class="post-info">
+            <span class="date">2016-06-30</span>
+            <a href="#disqus_thread" class="comments">Kommentare</a>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h2 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h2><ul>
+<li>Ubuntu 14.04</li>
+<li>国内</li>
+<li>JAVA </li>
+<li>vagrant</li>
+<li>WIN10</li>
+</ul>
+<h2 id="具体的shell脚本"><a href="#具体的shell脚本" class="headerlink" title="具体的shell脚本"></a>具体的shell脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">cd ~</div><div class="line"></div><div class="line">sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</div><div class="line">sleep 2</div><div class="line"></div><div class="line">sudo cat&gt;/etc/apt/sources.list&lt;&lt;EOF</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse</div><div class="line">  deb http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse</div><div class="line">  deb-src http://mirrors.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse</div><div class="line">EOF</div><div class="line">sleep 1</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line">sleep 1</div><div class="line"></div><div class="line">sudo apt-get install vim -y</div><div class="line">sudo apt-get install curl -y</div><div class="line">sleep 1</div><div class="line"></div><div class="line"></div><div class="line">sudo mkdir /var/cache/oracle-jdk8-installer</div><div class="line">sudo mv /vagrant/jdk-8u91-linux-x64.tar.gz /var/cache/oracle-jdk8-installer/jdk-8u91-linux-x64.tar.gz</div><div class="line">sudo apt-get install software-properties-common -y</div><div class="line">sudo apt-get install python-software-properties -y</div><div class="line">sleep 1</div><div class="line">sudo add-apt-repository ppa:webupd8team/java -y</div><div class="line">sleep 1</div><div class="line">sudo apt-get update</div><div class="line">sleep 1</div><div class="line">sudo apt-get install oracle-java8-installer -y</div><div class="line">sleep 1</div><div class="line"></div><div class="line">wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -</div><div class="line"></div><div class="line">echo &quot;deb https://mirrors.tuna.tsinghua.edu.cn/ELK/apt/elasticsearch/2.x/ stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list</div><div class="line"></div><div class="line">sudo apt-get update &amp;&amp; sudo apt-get install elasticsearch -y</div><div class="line"></div><div class="line">sudo service elasticsearch start</div><div class="line"></div><div class="line">sleep 10</div><div class="line"></div><div class="line">sudo update-rc.d elasticsearch defaults 95 10</div><div class="line">sleep 10</div><div class="line"></div><div class="line">curl localhost:9200/_nodes/process?pretty</div></pre></td></tr></table></figure>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/elasticsearch/">#elasticsearch</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+    <div class="comments">
+        
+
+
+    </div>
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是一个普通的网站
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2016/08/12/setup-vagrant/">setup-vagrant</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/06/30/install-setting-elasticsearch/">install-setting-elasticse</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
